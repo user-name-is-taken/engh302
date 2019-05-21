@@ -44,4 +44,6 @@
 - We have
 - Default topic is education
 - goals: how to write in your field
+
 - Type assignments and email them
+  - 
