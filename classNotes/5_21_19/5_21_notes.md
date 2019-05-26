@@ -35,7 +35,6 @@
 - DAP and Text analysis are in parallel
 - Everything can be revised until June 20
 - No final
-- 
 
 - all the assignments build up
 
@@ -44,6 +43,12 @@
 - We have
 - Default topic is education
 - goals: how to write in your field
-
 - Type assignments and email them
-  - 
+- Put your rough draft in the discussion board
+
+## response
+
+- headings aren't descriptive or the sections are too small to warrent a heading
+- change intro (less detail)
+- describe topic better (don't say "in this paper I'll..." make it flow)
+- 
