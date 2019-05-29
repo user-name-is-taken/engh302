@@ -1,97 +1,29 @@
+% !TeX root = ./finalPaperDraft.tex
 \documentclass[titlepage]{article}
 \author{Michael Lundquist}
 \title{Multiprocessor programming}
 
-%******* bibliography
-\usepackage[backend=biber,style=apa]{biblatex}
-%\usepackage{url, apacite}
-%for some reason, url doesn't work with biblatex
-\addbibresource{finalPaperDraft.bib}
-
-%******* math
-%https://tex.stackexchange.com/questions/41035/what-is-causing-undefined-control-sequence
-\usepackage{amsmath}
-
-%****** for double spacing
-\usepackage{setspace}
-%\singlespacing
-%\onehalfspacing
-\doublespacing
-%\setstretch{1.1}
-
-%****** titles
-\usepackage[explicit]{titlesec}
-\usepackage{ulem}
-\usepackage{lipsum}% just to generate text for the example
-
-\setcounter{secnumdepth}{4}
-\titleformat{\paragraph}[runin]
-  {\normalfont\normalsize\bfseries}{}{15pt}{\uline{\theparagraph\hspace*{1em}#1.}}
-\titleformat{name=\paragraph,numberless}[runin]
-  {\normalfont\normalsize\bfseries}{}{15pt}{\uline{#1.}}
-
-%************java highlighting def*****************
-% for java code https://stackoverflow.com/questions/3175105/inserting-code-in-this-latex-document-with-indentation
-\usepackage{listings}
-\usepackage{color}
-
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
-
-\lstset{
-  aboveskip=20pt,
-  belowskip=20pt,
-  frame=tb,
-  language=Java,
-  aboveskip=3mm,
-  belowskip=3mm,
-  showstringspaces=false,
-  columns=flexible,
-  basicstyle={\small\ttfamily},
-  %\linespread{8}}, (this property didn't work)
-  % https://tex.stackexchange.com/questions/200208/how-can-i-reduce-the-line-spacing-in-a-listing?rq=1
-  % added linespread to change the spacing in java, but it seems to not work (maybe global value overrides it.)
-  % 
-  numbers=none,
-  numberstyle=\tiny\color{gray},
-  keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
-  breaklines=true,
-  breakatwhitespace=true,
-  tabsize=3
-}
-
-% ********end java highlighting def**********
-
-% ******* python highlighting def**********
-\usepackage{pythonhighlight}
-% ******** end python highlighting def *********
-
-% ******** graphviz highlighting def ********
-\usepackage[pdf]{graphviz}
-% ******** end graphviz highlighting def ********
-
+%-----------begin-preamble---------------------------
+\usepackage{a4wide}										%wide use of a4 paper
+\usepackage[latin1]{inputenc}					%to type non-ascii chars
+\usepackage{eurosym}									%use: \euro
+\usepackage[bibnewpage]{apacite}									%bibliography in apa-style
+\usepackage{tocbibind}
 
 \begin{document}
 
-\maketitle
+%====================================================
+%-----------------references-------------------------
+%====================================================
+\bibliographystyle{apacann} %this was the key
 
-%*****************TITLE PAGE IS MADE************
+\setlength{\bibleftmargin}{.125in}
+%\setlength{\bibindent}{-\bibleftmargin}
 
-
-
-
-%******************REFERENCES***************
-
-
-%https://www.latex-tutorial.com/tutorials/bibtex/
-%https://www.youtube.com/watch?v=KS9GvK7cvmo
-%https://tex.stackexchange.com/questions/134180/how-do-i-add-citations-at-the-end-of-the-document-as-done-here
-%https://tex.stackexchange.com/questions/305381/biblatex-empty-bibliography
-\newpage
+\bibliography{finalPaperDraft}
+%\bibindent
+%\bibleftmargin
 \nocite{*}
-\printbibliography
+
 
 \end{document}
