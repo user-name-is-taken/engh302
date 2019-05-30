@@ -9,10 +9,41 @@ language = "eng",
 publisher = "Manning Publications",
 title = "Docker in Action",
 year = "2016",
-ANNOTATE = "A book about docker. Docker is a containerization lies at the root of almost all of DevOps. THIS IS GREATttt!",
+ANNOTATE = "Mr. Nickoloff has been a Software Engineer working in web-development for 20 years. This book covers Docker, a containerization tool that lies at the root of the DevOps revolution. This book is a tutorial on Docker. I might pull some quotes on how powerful Docker is from the book. I intend to use this as a more user-friendly tutorial than the docker docs listed below.",
 }
 
 %fix the case
+
+%a) evaluate authors
+%b)summarize scope and purpose of paper
+%c)summarize central idea or findings
+%d) compare to other works
+
+%docker
+@misc{docker, 
+    title={Docker Documentation}, 
+    url={https://docs.docker.com/}, 
+    journal={Docker Documentation}, 
+    year={2019}, 
+    month={May},
+    type={\bibcomputerprogrammanual},
+    ANNOTATE="Docker is the world leader in containerization software. Docker is the building block of DevOps. This resource is the authoritative reference on Docker, where as Docker In Action is written to be user-friendly.",
+}
+
+%unified devops
+@INPROCEEDINGS{7339039, 
+author={A. {Wahaballa} and O. {Wahballa} and M. {Abdellatief} and H. {Xiong} and Z. {Qin}}, 
+booktitle={2015 6th IEEE International Conference on Software Engineering and Service Science (ICSESS)}, 
+title={Toward unified DevOps model}, 
+year={2015}, 
+volume={}, 
+number={}, 
+pages={211-214}, 
+keywords={DP industry;software engineering;standardisation;unified DevOps model;DevOps community;software deployment;UDOM model;workflow execution model;standardization;Software;Data models;Testing;Organizations;Collaboration;Terminology;Industries;DevOps;conceptual deficit;Unified DevOps Model (UDOM)}, 
+doi={10.1109/ICSESS.2015.7339039}, 
+ISSN={2327-0594}, 
+month={Sep.},
+ANNOTATION="A. Wahballa is a post doctorate fellow at the University of Electronic Science and Technology of China;s School of Information and Software Engineering. He, like O. Wahballa has a handful of publications on IEEE. This paper can help Clarify confusions companies have when working with a specific vendor's DevOps product as they'll already have a framework for understand DevOps. I intend on using this resource to inform how I write my paper, perhaps building some models with their suggested standard..",}
 
 
 %DevOps and Microservices
@@ -27,17 +58,32 @@ pages={13-14},
 keywords={software architecture;software development management;software maintenance;software prototyping;DevOps;microservices architecture;MSA;software engineering paradigms;Systematics;Computer architecture;Software engineering;Conferences;Architecture;Market research;Microservices Architecture;DevOps;Systematic Mapping Study}, 
 doi={10.1109/APSECW.2017.18}, 
 ISSN={}, 
-month={12},
-ANNOTATE={"Creds (and university), hypothesis, results, relation to other resources [Online; accessed 16-April-2019]"},
-institution={donno},
+month={Dec},
+ANNOTATE={"P. Liang has 25 papers many related to DevOps and programmer collaboration. M.Waseem is relatively unpublished. Microservices is used in DevOps to limit the scope of a component of an IT archetecture. This enables collaboration and DevOps. "},
+%institution={donno},
 }
 
-@misc{docker, 
-    title={Docker Documentation}, 
-    url={https://docs.docker.com/}, 
-    journal={Docker Documentation}, 
-    year={2019}, 
-    month={5},
-    type={\bibcomputerprogrammanual},
-    ANNOTATE="Docker is primarily documented online",
+
+%GitLab
+@misc{gitlab,
+    title={Introduction to CI/CD with GitLab}, 
+    url={https://docs.gitlab.com/ee/ci/introduction/},
+    journal={GitLab},
+    ANNOTATE="GitLab is one of many DevOps-enabled software development products, but it is the best one, so I'll discuss it in the paper. Like the docker resource above, this website is mostly technical documentation so pulling from it may be hard.",
+    publisher={GitLab},
 }
+
+%devops cambrian explosion
+@ARTICLE{8314153, 
+author={M. {Kersten}}, 
+journal={IEEE Software}, 
+title={A Cambrian Explosion of DevOps Tools}, 
+year={2018}, 
+volume={35}, 
+number={2}, 
+pages={14-17}, 
+keywords={project management;software development management;resulting tool diversity;modern DevOps toolchain;Cambrian Explosion;value stream architecture;Software tools;Software development management;Task analysis;agile software development;DevOps;DevOps tools;value stream architecture;software development;software engineering}, 
+doi={10.1109/MS.2018.1661330}, 
+ISSN={0740-7459}, 
+month={March},
+ANNOTATE="Dr. Kersten is the Founder and CEO of Tasktop, he's been a PhD in Computer Science nearly 20 years ago now. This resource shows how new DevOps is, which shows why documentation is used."}
