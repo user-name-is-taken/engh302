@@ -22,7 +22,7 @@
 
 In “Creating and Evolving Developer Documentation: Understanding the Decisions of Open Source Contributions” Barthélémy Dagenais and Martin P. Robillard discuss the aspects of effective documentation. Using historical analysis and interviews, the authors determined how documentation is written and best practices for writing documentation. The historical analysis was primarily used to determine how documentation is currently written. Interviews were primarily used to determine pros and cons of different types of documentation. Although documentation methods differ for different types of projects, all projects benefit from good documentation in similar ways. Documentation can be a huge competitive advantage for a project. According to one of the interviewed contributors, "even if his project launched a year after a competing project, the user base grew quickly because the competing project had no documentation." \cite[p.6]{Dagenais:2010:CED:1882291.1882312}
 
-Although this study provided insights into effective documentation practices, the study's qualitative methods were insufficient to draw solid conclusions. In the study's historical analysis, the authors "manually inspected more than 1500 revisions of 19 documents selected from 10 open source projects."\cite[p.1]{Dagenais:2010:CED:1882291.1882312}. Nineteen documents is hardly enough to draw serious conclusions from but can suggest patterns in how documentation is made that warrant future research. The project's authors interviewed 12 contributors to and 10 users of open source projects. These interviews were about a half-hour long. Again, half-hour interviews don't prove anything, but they do give insights into some expert's experiences developing documentations.
+Although this study provided insights into effective documentation practices, the study's qualitative methods were insufficient to draw solid conclusions. In the study's historical analysis, the authors "manually inspected more than 1500 revisions of 19 documents selected from 10 open source projects."\cite[p.1]{Dagenais:2010:CED:1882291.1882312}. Nineteen documents is hardly enough to draw serious conclusions from but can suggest patterns in how documentation is made that warrant future research. The project's authors interviewed 12 contributors to and 10 users of open source projects. These interviews were about a half-hour long. Again, half-hour interviews don't prove anything, but they do give insights into some expert's experiences developing documentation.
 
 \section{Types of Documentation}
 
@@ -32,15 +32,28 @@ The first type of documentation the authors analyzed are wiki pages. Wiki pages,
 
 The second type of documentation analyzed was getting started documentation. Getting started documentation is designed to get users to a base level of competency with a tool as quickly as possible. If getting started documentation is well written, it can also serve as marketing material. Unfortunately, "Finding a good example on which to base the getting started documentation, an example that is realistic but not too contrived, is difficult" \cite[p.6 Contributor 11]{Dagenais:2010:CED:1882291.1882312}. Good getting started documentation is useful when learning frameworks because it gives the user a simple example that's consistent the framework's principles but doesn't overload the user.
 
-The final type of documentation is reference documentation. Reference documentation describes 
+The final type of documentation is reference documentation. Good reference documentation should simply describe a single function. According to the authors for "atomic functions, reference documentation is the most appropriate documentation type to begin with because, as contributor C11 mentioned, it can be difficult to create getting started documentation that shows examples calling many functions" \cite[p.6]{Dagenais:2010:CED:1882291.1882312}. Libraries of atomic functions, for example rest APIs, are very different from frameworks that require a conceptual understanding of the framework to be useful. Fortunately, writing reference documentation is much easier than writing getting started documentation because it only requires documenting small parts of a code base. 
 
 \section{Documentation Management}
 
-tools
-writing docs immediately
-writing a book (bursts)
-separate Docs team
-responsiveness to comments and questions
+The paper also discussed some miscellaneous observations about the documentation process. 
+
+The paper discussed how useful documentation tools can be. Tools cause many syntax errors in documentation. According to the authors, they "were responsible for an important amount of changes and that better tool support could probably mitigate this problem: 55.4\% in Eclipse (HTML), 11.4\% in Django (Sphinx), 11.1\% in GTK (SGML), and 6.7\% in WordPress (wiki)" \cite[p.4]{Dagenais:2010:CED:1882291.1882312}. Despite all these errors caused by documentation tools, they are still invaluable. Without documentation tools, documentation becomes scattered and unstandardized.
+
+Although having a dedicated documentation tool is critical, having a dedicated documentation team can be disastrous. When a separate team exclusively writes documentation, "code contributors outnumbered documentation contributors so the documentation lagged behind the implementation"\cite[p.7]{Dagenais:2010:CED:1882291.1882312}. Additionally, the documentation team could misunderstand how the contributors' code works and mis-document it.
+
+
+An excellent way to avoid having a dedicated documentation team is to require all code contributions to include related documentation. Then, if users then have questions about a developer's documentation, it can be revised as needed. Having a policy that enforces developers to include documentation with their contributions requires the developers to think about how their contributions actually work. When developers think how their contributions work, they often catch mistakes. In “Creating and Evolving Developer Documentation: Understanding the Decisions of Open Source Contributions”, the authors call this proof-reading process "embarrassment-driven development" \cite[p.6]{Dagenais:2010:CED:1882291.1882312}.
+
+Embarrassment-driven development can be useful on the macro scale also. The historical analysis discussed in the paper revealed that projects' documentation often gets bursts of activity over a short period of time. When interviewed, the projects' lead contributors said some of these bursts of activity were due to book deals. These book deals required the lead contributors describe how their project work which forced them to re-evaluate much of their documentation.
+
+\section{conclusion}
+
+In conclusion, the 
+
+doc types: wiki, getting started, reference
+
+doc management: tools, requiring docs with contributions, documentation bursts
 
 
 \bibliography{finalPaperDraft}
