@@ -34,34 +34,63 @@ Along with the "it works on my machine" mind-set comes the monolith design patte
 
 Although operations staff are generally very responsive, their job is fundamentally not development. This segregation means operational staff may not know how changes to their servers they manage will affect developers.
 
-Simply keeping servers running is a huge challenge. Without DevOps, operations staff generally create virtual machines 
+Simply keeping servers running is a huge challenge. Without DevOps, operations staff generally create a virtual machine for each component that needs to run. Virtual machines have worked wonders for a long time, but they have some major disadvantages. For the following reasons, virtual machines are tied to the machine they're running on. First, virtual machines require memory and CPU sizes to be specified. Specifying these parameters in a virtual machine inherently makes it less portable. Second, moving a virtual machine requires taking a snapshot of the entire machine and loading it somewhere else. These snapshots are very large and working with them can be cumbersome. Finally, virtual machine managers are generally not open source or free, and will try to prevent you from switching to a different manager. When operators use virtual machines then complain about developers' software not working in production, it's rather hypocritical. Fortunately, a DevOps concept called containerization enables operations staff to run multiple machines without tying the images to their environment.
 
-If keeping servers up to date and working weren't enough, operations staff have to deal with developers. 
+If keeping servers up to date and working weren't enough, operations staff have to deal with developers. Although the classic call in for support model generally works, it's very frustrating. It requires developers design their programs to work on a server they don't manage, so naturally they don't know all the ins and outs of working with the server. This customer support model is often known as fire fighting because the problems operations staff face are endless and horrible.
 
-green geeks
+\section{DevOps in an Ideal World}
 
-Documentation
+In an ideal world, DevOps can solve many of the problems discussed above. Simply put DevOps is a collection of tools and protocols that remove the strict segregation between development and operations.
 
-versions
+\subsection{What is DevOps? UDOM}
 
-virtual machines
+In "Toward Unified DevOps Model" by Wahabala et. al., the fundamental components of DevOps are discussed. 
 
-\section{DevOps}
+\cite[]{udom.7339039}
+% UDOM and politics
+  % peer review
+  % Testing
+  %
+
+\subsection{Docker}
+
+\cite[]{docker}
+
+%docker & docker-compose & docker-hub
+
+\subsection{GitLab}
+
+\cite[]{gitlab}
+
+integration
+Testing (CI/CD)
+kubernetes
+obviously git
+
+
+\subsection{Documentation}
+
+\cite[]{Dagenais:2010:CED:1882291.1882312}
+
+\subsection{Microservices}
+
+\cite[]{micro.8312518}
+
+\section{Reality}
+
+my personal experience
 
 portainer
 
 installing GitLab
 
-%docker & docker-compose & docker-hub
-
-
-
+politics
 
 
 %====================================================
 %-----------------references-------------------------
 %====================================================
-\bibliographystyle{apacann} %this was the key
+\bibliographystyle{apacann} %this was the key to annotations
 
 \setlength{\bibleftmargin}{.125in}
 %\setlength{\bibindent}{-\bibleftmargin}
